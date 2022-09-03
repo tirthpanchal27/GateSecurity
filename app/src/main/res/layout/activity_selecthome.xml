@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bggradient"
+    tools:context=".selecthome">
+
+    <TextView
+        android:id="@+id/selectcity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select City"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/citytv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectcity"
+        android:layout_marginTop="30dp"
+        android:padding="6dp"
+        android:text="City"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:textColor="@color/white" />
+
+    <Spinner
+        android:id="@+id/cityspinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/citytv"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/soctv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cityspinner"
+        android:layout_marginTop="30dp"
+        android:padding="6dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="Society"
+        android:textColor="@color/white" />
+
+    <Spinner
+        android:id="@+id/socspinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/soctv"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/submitbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/socspinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="submit" />
+</RelativeLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "852203271942",
+    "project_id": "gatesecurityapp-2dfbf",
+    "storage_bucket": "gatesecurityapp-2dfbf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852203271942:android:52e41ff5c5f8e6fe515087",
+        "android_client_info": {
+          "package_name": "com.example.gatesecurutiyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852203271942-sj4t8rvltu6q8ouqu6919ru41koe7ilf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoxAVIKiSnx_wTjydGWOFyTABKrF28eig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852203271942-sj4t8rvltu6q8ouqu6919ru41koe7ilf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

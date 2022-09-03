@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bggradient"
+    tools:context=".Home.features.socservices">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Soceity Servies Numbers"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
+
+
+    <TextView
+        android:id="@+id/plumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Plumber"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/plumberedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/plumber"
+        android:hint="Add Number" />
+
+    <TextView
+        android:id="@+id/Watersupplier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/plumberedit"
+        android:hint="Add Number"
+        android:text="Water Supplier"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/Watersupplieredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Watersupplier"
+        android:hint="Add Number" />
+
+    <TextView
+        android:id="@+id/Electricity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Watersupplieredit"
+        android:text="Electricity"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/electricityedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Electricity"
+        android:hint="Add Number" />
+
+    <TextView
+        android:id="@+id/Housemaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/electricityedit"
+        android:text="House Maid"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/housemaidedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Housemaid"
+        android:hint="Add Number" />
+
+    <TextView
+        android:id="@+id/cleaner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/housemaidedit"
+        android:text="Cleaner"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/cleaneredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cleaner"
+        android:hint="Add Number" />
+
+    <TextView
+        android:id="@+id/Wifiprovider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cleaneredit"
+        android:text="Wifi Provider"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/Wifiprovideredit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Wifiprovider"
+        android:hint="Add Number" />
+
+    <TextView
+        android:id="@+id/nearby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Wifiprovideredit"
+        android:text="other Services Near You"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+</RelativeLayout>

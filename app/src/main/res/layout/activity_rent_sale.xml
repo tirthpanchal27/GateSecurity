@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/bggradient"
+tools:context=".Home.features.rent_sale">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Rent / Sell"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
+
+
+<TextView
+    android:id="@+id/rent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="80dp"
+    android:text="For Rent"
+    android:textColor="@color/white"
+    android:textSize="20dp" />
+
+<EditText
+    android:id="@+id/rentedit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/rent"
+    android:textSize="20dp"
+    android:hint="Apartments available for rent" />
+
+    <TextView
+        android:id="@+id/sell"
+        android:layout_below="@id/rentedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For Sell"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/selledit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sell"
+        android:textSize="20dp"
+        android:hint="Apartments available for Sell" />
+
+
+</RelativeLayout>
