@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bggradient"
-    tools:context=".Home.features.socservices">
+    tools:context=".membersocservices">
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -24,7 +26,7 @@
         android:textColor="@color/white"
         android:textSize="20dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/plumberedit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,7 +43,7 @@
         android:textColor="@color/white"
         android:textSize="20dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/Watersupplieredit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,7 +59,7 @@
         android:textColor="@color/white"
         android:textSize="20dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/electricityedit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,7 +75,7 @@
         android:textColor="@color/white"
         android:textSize="20dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/housemaidedit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -89,7 +91,7 @@
         android:textColor="@color/white"
         android:textSize="20dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/cleaneredit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -105,23 +107,20 @@
         android:textColor="@color/white"
         android:textSize="20dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/Wifiprovideredit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Wifiprovider"
         android:hint="Add Number" />
 
-    <Button
-        android:id="@+id/addnobtn"
+    <TextView
+        android:id="@+id/nearby"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/custom_button"
-        android:text="ADD Numbers"
-        android:textColor="@color/appblack"
-        android:textStyle="bold"
         android:layout_below="@+id/Wifiprovideredit"
-        android:layout_centerHorizontal="true"/>
-
+        android:text="other Services Near You"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
 
 </RelativeLayout>

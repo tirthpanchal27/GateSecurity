@@ -100,13 +100,29 @@
             android:drawableEnd="@drawable/ic_baseline_edit_24"
             android:ems="10"
             android:inputType="textPostalAddress"
-            android:text="Home Address"
+            android:text="Block"
             android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/setnumber">
+        </EditText>
+
+        <EditText
+            android:id="@+id/setaddress2"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_baseline_edit_24"
+            android:ems="10"
+            android:inputType="textPostalAddress"
+            android:text="Home Number"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/setaddress">
 
 
         </EditText>
@@ -124,7 +140,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/setaddress"></EditText>
+            app:layout_constraintTop_toBottomOf="@id/setaddress2"></EditText>
 
         <Button
             android:id="@+id/changebtn"

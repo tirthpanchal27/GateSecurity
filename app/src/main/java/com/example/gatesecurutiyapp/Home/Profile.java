@@ -51,7 +51,8 @@ public class Profile extends AppCompatActivity {
         Button logoutbtn = (Button) findViewById(R.id.logoutbtn);
         TextView fullname = findViewById(R.id.profilename);
         TextView email = findViewById(R.id.profileemail);
-        TextView city = findViewById(R.id.profileaddress);
+        TextView Block = findViewById(R.id.profileaddress);
+        TextView Hnum = findViewById(R.id.profileaddress2);
         TextView verifyMsg = findViewById(R.id.verifymsg);
         profileImage = findViewById(R.id.profileimage);
         auth = FirebaseAuth.getInstance();
@@ -99,7 +100,8 @@ public class Profile extends AppCompatActivity {
 
                 fullname.setText(documentSnapshot.getString("name"));
                 email.setText(documentSnapshot.getString("email"));
-                city.setText(documentSnapshot.getString("city"));
+                Block.setText(documentSnapshot.getString("Block"));
+                Hnum.setText(documentSnapshot.getString("Home Number"));
             }
         });
 
@@ -121,14 +123,6 @@ public class Profile extends AppCompatActivity {
                         MainActivity.class);
 
                 startActivity(intent);
-            }
-        });
-
-        profileImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(openGalleryIntent, 1000);
             }
         });
     }

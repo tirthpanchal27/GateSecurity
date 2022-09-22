@@ -7,19 +7,29 @@ import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.gatesecurutiyapp.GuardHome;
 import com.example.gatesecurutiyapp.Home.Home;
 import com.example.gatesecurutiyapp.MainActivity;
 import com.example.gatesecurutiyapp.R;
 import com.example.gatesecurutiyapp.Signup;
+import com.example.gatesecurutiyapp.membersocservices;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Features extends AppCompatActivity {
     CardView emergencycv;
     CardView announcmentcv;
     CardView socservicecv;
     CardView rentsellcv;
+    FirebaseAuth auth;
+    FirebaseFirestore fStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +42,9 @@ public class Features extends AppCompatActivity {
         announcmentcv = (CardView) findViewById(R.id.announcementcv);
         socservicecv = (CardView) findViewById(R.id.socservicecv);
         rentsellcv = (CardView) findViewById(R.id.rentsellcv);
+
+        auth = FirebaseAuth.getInstance();
+        fStore =FirebaseFirestore.getInstance();
 
         emergencycv.setOnClickListener(new View.OnClickListener() {
             @Override

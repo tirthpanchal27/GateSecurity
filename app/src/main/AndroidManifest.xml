@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gatesecurutiyapp">
+    package="com.example.gatesecurutiyapp" >
 
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,7 +11,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GateSecurutiyApp">
+        android:theme="@style/Theme.GateSecurutiyApp" >
+        <activity
+            android:name=".membersocservices"
+            android:exported="false" />
+        <activity
+            android:name=".Home.features.residents"
+            android:exported="false" />
         <activity
             android:name=".Home.features.rent_sale"
             android:exported="false" />
@@ -50,9 +56,6 @@
             android:name=".Home.features.Payments"
             android:exported="false" />
         <activity
-            android:name=".selecthome"
-            android:exported="false" />
-        <activity
             android:name=".Home.Settings"
             android:exported="true" />
         <activity
@@ -63,7 +66,7 @@
             android:exported="true" />
         <activity
             android:name=".Splashscreen"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

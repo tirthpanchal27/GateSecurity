@@ -31,10 +31,14 @@
         <entry key="..\:/GateSecurity/GateSecurutiyApp/app/src/main/res/layout/activity_guardhome.xml" value="0.264" />
         <entry key="..\:/GateSecurity/GateSecurutiyApp/app/src/main/res/layout/activity_home.xml" value="0.264" />
         <entry key="..\:/GateSecurity/GateSecurutiyApp/app/src/main/res/layout/activity_main.xml" value="0.17391304347826086" />
+        <entry key="..\:/GateSecurity/GateSecurutiyApp/app/src/main/res/layout/activity_member_emergency.xml" value="0.27447916666666666" />
+        <entry key="..\:/GateSecurity/GateSecurutiyApp/app/src/main/res/layout/activity_member_socservices.xml" value="0.27447916666666666" />
+        <entry key="..\:/GateSecurity/GateSecurutiyApp/app/src/main/res/layout/activity_membersocservices.xml" value="0.27447916666666666" />
         <entry key="..\:/GateSecurity/GateSecurutiyApp/app/src/main/res/layout/activity_menubar.xml" value="0.14270833333333333" />
         <entry key="..\:/GateSecurity/GateSecurutiyApp/app/src/main/res/layout/activity_payments.xml" value="0.27291666666666664" />
         <entry key="..\:/GateSecurity/GateSecurutiyApp/app/src/main/res/layout/activity_profile.xml" value="0.2" />
         <entry key="..\:/GateSecurity/GateSecurutiyApp/app/src/main/res/layout/activity_rent_sale.xml" value="0.29322916666666665" />
+        <entry key="..\:/GateSecurity/GateSecurutiyApp/app/src/main/res/layout/activity_residents.xml" value="0.275" />
         <entry key="..\:/GateSecurity/GateSecurutiyApp/app/src/main/res/layout/activity_securitylogin.xml" value="0.27291666666666664" />
         <entry key="..\:/GateSecurity/GateSecurutiyApp/app/src/main/res/layout/activity_selecthome.xml" value="0.27291666666666664" />
         <entry key="..\:/GateSecurity/GateSecurutiyApp/app/src/main/res/layout/activity_setting.xml" value="0.25416666666666665" />

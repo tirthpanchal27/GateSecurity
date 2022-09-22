@@ -32,7 +32,7 @@ import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 public class Settings extends AppCompatActivity {
-    EditText number, fullname, email, city, password;
+    EditText number, fullname, email, block, hnum, password;
     TextView imgbtn;
     Button changebtn;
     ImageView profileImage;
@@ -52,7 +52,8 @@ public class Settings extends AppCompatActivity {
         fullname = findViewById(R.id.setname);
         email = findViewById(R.id.setemail);
         number = findViewById(R.id.setnumber);
-        city = findViewById(R.id.setaddress);
+        block = findViewById(R.id.setaddress);
+        hnum = findViewById(R.id.setaddress2);
         password = findViewById(R.id.setpassword);
         profileImage = findViewById(R.id.setimage);
         imgbtn = findViewById(R.id.imgbtn);
@@ -78,7 +79,8 @@ public class Settings extends AppCompatActivity {
                 number.setText(documentSnapshot.getString("number"));
                 fullname.setText(documentSnapshot.getString("name"));
                 email.setText(documentSnapshot.getString("email"));
-                city.setText(documentSnapshot.getString("city"));
+                block.setText(documentSnapshot.getString("Block"));
+                hnum.setText(documentSnapshot.getString("Home Number"));
                 password.setText(documentSnapshot.getString("password"));
 
             }
@@ -105,7 +107,8 @@ public class Settings extends AppCompatActivity {
         String name = fullname.getText().toString();
         String num = number.getText().toString();
         String mail = email.getText().toString();
-        String place = city.getText().toString();
+        String blocknum = block.getText().toString();
+        String homenum = hnum.getText().toString();
         String pass = password.getText().toString();
 
         final DocumentReference sDoc = fStore.collection("users").document(userId);
@@ -116,7 +119,8 @@ public class Settings extends AppCompatActivity {
                 transaction.update(sDoc, "name", name);
                 transaction.update(sDoc, "email", mail);
                 transaction.update(sDoc, "number", num);
-                transaction.update(sDoc, "city", place);
+                transaction.update(sDoc, "Block", blocknum);
+                transaction.update(sDoc, "Home Number", homenum);
                 transaction.update(sDoc, "password", pass);
 
                 return null;

@@ -26,7 +26,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="72dp"
             android:background="@drawable/app_icon"
             android:drawableEnd="@color/apporange"
             android:ems="10"
@@ -75,12 +75,25 @@
             android:ems="10"
             android:inputType="text"
             android:padding="10dp"
-            android:text="City"
+            android:text="Block"
             android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@id/profileimage"
             app:layout_constraintTop_toBottomOf="@id/profileemail" />
+        <TextView
+            android:id="@+id/profileaddress2"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="10dp"
+            android:text="House Number"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/profileimage"
+            app:layout_constraintTop_toBottomOf="@id/profileaddress" />
 
         <TextView
             android:id="@+id/verifymsg"

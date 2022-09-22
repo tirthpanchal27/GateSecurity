@@ -30,8 +30,8 @@ import java.util.Map;
 
 public class Signup extends AppCompatActivity {
     public static final String TAG = "TAG";
-    EditText uName, uNumber, uCity, uEmail, uPass, uCPass;
-    CheckBox rGuard, rMember;
+    EditText uName, uNumber, uBlock, uEmail, uPass, uCPass, uHnum;
+    RadioButton rGuard, rMember;
     Button signup_btn;
 
     FirebaseAuth auth;
@@ -46,28 +46,31 @@ public class Signup extends AppCompatActivity {
         actionBar.hide();
         uName = findViewById(R.id.editTextTextPersonName2);
         uNumber = findViewById(R.id.editTextPhone);
-        uCity = findViewById(R.id.editTextTextPersonCity);
+        uBlock = findViewById(R.id.editTextTextPersonCity);
+        uHnum = findViewById(R.id.editTexthomenumber);
         uEmail = findViewById(R.id.editTextTextEmailAddress);
         uPass = findViewById(R.id.editTextTextPassword);
         uCPass = findViewById(R.id.editTextTextPassword3);
-        rGuard = findViewById(R.id.radiobutton3);
-        rMember = findViewById(R.id.radiobutton4);
+    //    rGuard = findViewById(R.id.radiobutton3);
+   //     rMember = findViewById(R.id.radiobutton4);
         Button signup_btn = (Button) findViewById(R.id.button2);
 
         auth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
+
 
         signup_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String name = uName.getText().toString();
                 String number = uNumber.getText().toString();
-                String city = uCity.getText().toString();
+                String Block = uBlock.getText().toString();
+                String Homenum = uHnum.getText().toString();
                 String email = uEmail.getText().toString().trim();
                 String pass = uPass.getText().toString().trim();
                 String cpass = uCPass.getText().toString();
-                String guard = rGuard.getText().toString();
-                String membr = rMember.getText().toString();
+        //        String guard = rGuard.getText().toString();
+            //    String membr = rMember.getText().toString();
 
                 if (TextUtils.isEmpty(email)) {
                     uEmail.setError("Email is Required");
@@ -108,16 +111,21 @@ public class Signup extends AppCompatActivity {
                             user.put("email",email);
                             user.put("number",number);
                             user.put("password",pass);
-                            user.put("city",city);
+                            user.put("Block",Block);
+                            user.put("Home Number",Homenum);
+                            user.put("isMember", "1");
 
-                            if(rGuard.isChecked())
+
+                            documentReference.set(user);
+
+                           /* if(rGuard.isChecked())
                             {
                                 user.put("member",guard);
                             }
                             if(rMember.isChecked())
                             {
                                 user.put("member", membr);
-                            }
+                            }*/
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {
