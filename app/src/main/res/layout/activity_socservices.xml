@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Soceity Servies Numbers"
+        android:text="Society Services Numbers"
         android:textColor="@color/white"
         android:textSize="24dp" />
 
@@ -113,15 +113,16 @@
         android:hint="Add Number" />
 
     <Button
-        android:id="@+id/addnobtn"
+        android:id="@+id/updatenobtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/Wifiprovideredit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custom_button"
         android:text="ADD Numbers"
         android:textColor="@color/appblack"
-        android:textStyle="bold"
-        android:layout_below="@+id/Wifiprovideredit"
-        android:layout_centerHorizontal="true"/>
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

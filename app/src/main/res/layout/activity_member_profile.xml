@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bggradient"
+    tools:context=".Home.Profile">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bggradient"
+        android:textColor="@color/white">
+
+        <ImageButton
+            android:id="@+id/settingbtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_baseline_settings_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/profileimage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="72dp"
+            android:background="@drawable/app_icon"
+            android:drawableEnd="@color/apporange"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Add Image"
+            android:textSize="16sp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/profilename"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:text="Name"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/profileimage"
+            app:layout_constraintTop_toBottomOf="@+id/settingbtn" />
+
+
+        <TextView
+            android:id="@+id/profileemail"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:text="Email"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/profileimage"
+            app:layout_constraintTop_toBottomOf="@id/profilename" />
+
+
+        <TextView
+            android:id="@+id/profileaddress"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="10dp"
+            android:text="Block"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/profileimage"
+            app:layout_constraintTop_toBottomOf="@id/profileemail" />
+        <TextView
+            android:id="@+id/profileaddress2"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="10dp"
+            android:text="House Number"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/profileimage"
+            app:layout_constraintTop_toBottomOf="@id/profileaddress" />
+
+        <TextView
+            android:id="@+id/verifymsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Click here to verify your Email."
+            android:textColor="@color/apporange"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logoutbtn"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/logoutbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="144dp"
+            android:background="@drawable/custom_button"
+            android:text="Logout"
+            android:textColor="@color/appblack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </Button>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

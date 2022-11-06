@@ -1,4 +1,4 @@
-package com.example.gatesecurutiyapp.Home.features;
+package com.example.gatesecurutiyapp.Member;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -6,17 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
+import com.example.gatesecurutiyapp.Home.features.residents;
 import com.example.gatesecurutiyapp.MyAdapter;
+import com.example.gatesecurutiyapp.MyAdapter3;
 import com.example.gatesecurutiyapp.R;
 import com.example.gatesecurutiyapp.fetchResident;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.example.gatesecurutiyapp.fetchannouncements;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -26,11 +24,10 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class residents extends AppCompatActivity {
-
+public class memberAnnouncements extends AppCompatActivity {
     RecyclerView recyclerView;
-    ArrayList<fetchResident> residentArrayList;
-    MyAdapter myAdapter;
+    ArrayList<fetchannouncements> announcementArrayList;
+    MyAdapter3 myAdapter3;
     FirebaseFirestore db;
 
     @Override
@@ -45,17 +42,17 @@ public class residents extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         db = FirebaseFirestore.getInstance();
-        residentArrayList = new ArrayList<fetchResident>();
-        myAdapter = new MyAdapter(residents.this, residentArrayList);
+        announcementArrayList = new ArrayList<fetchannouncements>();
+        myAdapter3 = new MyAdapter3(memberAnnouncements.this, announcementArrayList);
 
-        recyclerView.setAdapter(myAdapter);
+        recyclerView.setAdapter(myAdapter3);
 
         EventChangeListener();
     }
 
     private void EventChangeListener() {
 
-        db.collection("users").orderBy("name", Query.Direction.ASCENDING)
+        db.collection("announcements")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -71,10 +68,10 @@ public class residents extends AppCompatActivity {
                         {
                             if(dc.getType() == DocumentChange.Type.ADDED){
 
-                                residentArrayList.add(dc.getDocument().toObject(fetchResident.class));
+                                announcementArrayList.add(dc.getDocument().toObject(fetchannouncements.class));
                             }
 
-                            myAdapter.notifyDataSetChanged();
+                            myAdapter3.notifyDataSetChanged();
                         }
                     }
                 });

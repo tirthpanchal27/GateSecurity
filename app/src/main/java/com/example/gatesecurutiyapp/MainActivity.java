@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.example.gatesecurutiyapp.Home.Home;
 import com.example.gatesecurutiyapp.Home.features.Features;
+import com.example.gatesecurutiyapp.Member.memberHome;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -36,9 +37,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
 
-    DatabaseReference member;
+
     EditText uEmail, uPass;
-    RadioButton rGuard, rMember;
     Button uLogin, forgotTextLink;
     TextView uSignup, noacc;
     FirebaseAuth auth;
@@ -57,8 +57,6 @@ public class MainActivity extends AppCompatActivity {
         noacc = findViewById(R.id.noacc);
         uSignup =findViewById(R.id.signupbtn);
         forgotTextLink = findViewById(R.id.forgotbtn);
-        rGuard = findViewById(R.id.radiobutton3);
-        rMember = findViewById(R.id.radiobutton4);
         auth = FirebaseAuth.getInstance();
         fStore =FirebaseFirestore.getInstance();
 
@@ -177,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (documentSnapshot.getString("isMember")!=null)
                 {
-                    Intent intent = new Intent(MainActivity.this, Home.class);
+                    Intent intent = new Intent(MainActivity.this, memberHome.class);
                     startActivity(intent);
                     finish();
                 }

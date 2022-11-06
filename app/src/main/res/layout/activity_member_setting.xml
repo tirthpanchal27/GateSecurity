@@ -53,8 +53,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent">
 
+        </EditText>
 
         <EditText
             android:id="@+id/setemail"
@@ -69,7 +70,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/setname"/>
+            app:layout_constraintTop_toBottomOf="@id/setname">
+
+
+        </EditText>
 
         <EditText
             android:id="@+id/setnumber"
@@ -84,8 +88,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/setemail"/>
+            app:layout_constraintTop_toBottomOf="@id/setemail">
 
+
+        </EditText>
 
         <EditText
             android:id="@+id/setaddress"
@@ -100,8 +106,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/setnumber"/>
-
+            app:layout_constraintTop_toBottomOf="@id/setnumber">
+        </EditText>
 
         <EditText
             android:id="@+id/setaddress2"
@@ -116,8 +122,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/setaddress"/>
+            app:layout_constraintTop_toBottomOf="@id/setaddress">
 
+
+        </EditText>
 
         <EditText
             android:id="@+id/setpassword"
@@ -132,7 +140,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/setaddress2"/>
+            app:layout_constraintTop_toBottomOf="@id/setaddress2"></EditText>
 
         <Button
             android:id="@+id/changebtn"
@@ -145,7 +153,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"></Button>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

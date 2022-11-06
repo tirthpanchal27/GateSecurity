@@ -38,38 +38,11 @@
         app:layout_constraintVertical_bias="0.575">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cons1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
 
-            <RadioGroup
-                android:id="@+id/radiogroup2"
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.35"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.05">
-
-                <RadioButton
-                    android:id="@+id/radiobutton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:shadowColor="@color/apporange"
-                    android:text="Security Guard"
-                    android:textColor="@color/white" />
-
-                <RadioButton
-                    android:id="@+id/radiobutton4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Society Members"
-                    android:textColor="@color/white" />
-
-            </RadioGroup>
 
             <EditText
                 android:id="@+id/editTextTextPersonName2"
@@ -84,7 +57,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.507"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radiogroup2"
+                app:layout_constraintTop_toTopOf="@+id/cons1"
                 app:layout_constraintVertical_bias="0.02" />
 
             <EditText

@@ -32,4 +32,16 @@
         android:textSize="20dp"
         android:hint="Write Today's Announcements" />
 
+    <Button
+        android:id="@+id/sendann"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Announcmentsedit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="send"
+        android:textColor="@color/appblack"
+        android:background="@drawable/custom_button"
+        android:textStyle="bold"/>
+
 </RelativeLayout>

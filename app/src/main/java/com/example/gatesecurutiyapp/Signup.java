@@ -51,8 +51,6 @@ public class Signup extends AppCompatActivity {
         uEmail = findViewById(R.id.editTextTextEmailAddress);
         uPass = findViewById(R.id.editTextTextPassword);
         uCPass = findViewById(R.id.editTextTextPassword3);
-    //    rGuard = findViewById(R.id.radiobutton3);
-   //     rMember = findViewById(R.id.radiobutton4);
         Button signup_btn = (Button) findViewById(R.id.button2);
 
         auth = FirebaseAuth.getInstance();
@@ -68,9 +66,6 @@ public class Signup extends AppCompatActivity {
                 String Homenum = uHnum.getText().toString();
                 String email = uEmail.getText().toString().trim();
                 String pass = uPass.getText().toString().trim();
-                String cpass = uCPass.getText().toString();
-        //        String guard = rGuard.getText().toString();
-            //    String membr = rMember.getText().toString();
 
                 if (TextUtils.isEmpty(email)) {
                     uEmail.setError("Email is Required");
@@ -115,17 +110,8 @@ public class Signup extends AppCompatActivity {
                             user.put("Home Number",Homenum);
                             user.put("isMember", "1");
 
-
                             documentReference.set(user);
 
-                           /* if(rGuard.isChecked())
-                            {
-                                user.put("member",guard);
-                            }
-                            if(rMember.isChecked())
-                            {
-                                user.put("member", membr);
-                            }*/
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {

@@ -1,6 +1,7 @@
-package com.example.gatesecurutiyapp.Home;
+package com.example.gatesecurutiyapp.Member;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
@@ -11,6 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.gatesecurutiyapp.Home.Home;
+import com.example.gatesecurutiyapp.Home.Profile;
 import com.example.gatesecurutiyapp.Home.features.EmergencyNo;
 import com.example.gatesecurutiyapp.Home.features.Features;
 import com.example.gatesecurutiyapp.Home.features.announcements;
@@ -26,7 +29,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-public class Home extends AppCompatActivity {
+public class memberHome extends AppCompatActivity {
 
     TextView username;
     FirebaseAuth auth;
@@ -38,9 +41,9 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        getWindow().setStatusBarColor(ContextCompat.getColor(Home.this, R.color.appblack));
-        //ActionBar actionBar = getSupportActionBar();
-        //actionBar.hide();
+        getWindow().setStatusBarColor(ContextCompat.getColor(memberHome.this, R.color.appblack));
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
         Button profile_button = (Button) findViewById(R.id.profilebutton);
         Button sharebtn= findViewById(R.id.sharebtn);
         CardView viewall = findViewById(R.id.viewallcv);
@@ -67,8 +70,8 @@ public class Home extends AppCompatActivity {
         profile_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this,
-                        Profile.class);
+                Intent intent = new Intent(memberHome.this,
+                        memberProfile.class);
                 startActivity(intent);
             }
         });
@@ -89,7 +92,7 @@ public class Home extends AppCompatActivity {
         viewall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, Features.class);
+                Intent intent = new Intent(memberHome.this, memberFeatures.class);
                 startActivity(intent);
             }
         });
@@ -97,7 +100,7 @@ public class Home extends AppCompatActivity {
         residentcv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, residents.class);
+                Intent intent = new Intent(memberHome.this, residents.class);
                 startActivity(intent);
             }
         });
@@ -105,7 +108,7 @@ public class Home extends AppCompatActivity {
         emergencycv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, EmergencyNo.class);
+                Intent intent = new Intent(memberHome.this, memberEmergencyNo.class);
                 startActivity(intent);
             }
         });
@@ -113,7 +116,7 @@ public class Home extends AppCompatActivity {
         announcementcv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Home.this, announcements.class);
+                Intent intent = new Intent(memberHome.this, memberAnnouncements.class);
                 startActivity(intent);
             }
         });

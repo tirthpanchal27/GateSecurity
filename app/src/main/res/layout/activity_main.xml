@@ -28,34 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <RadioGroup
-                android:id="@+id/radiogroup"
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.35"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.05">
 
-                <RadioButton
-                    android:id="@+id/radiobutton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:shadowColor="@color/apporange"
-                    android:text="Security Guard"
-                    android:textColor="@color/white" />
-
-                <RadioButton
-                    android:id="@+id/radiobutton4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Society Members"
-                    android:textColor="@color/white" />
-
-            </RadioGroup>
             <TextView
                 android:id="@+id/usernametext"
                 android:layout_width="wrap_content"
@@ -68,7 +41,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.149"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/radiogroup"
+                app:layout_constraintTop_toTopOf="@+id/cardView1"
                 app:layout_constraintVertical_bias="0.080" />
 
             <TextView

@@ -8,27 +8,27 @@
     android:background="@drawable/bggradient"
     tools:context=".Home.Home">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="60dp"
-            android:layout_marginVertical="30dp"
-            android:layout_marginStart="65dp"
-            android:fontFamily="casual"
-            android:text="Gate security"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="40sp"
-            android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginVertical="30dp"
+        android:layout_marginStart="65dp"
+        android:fontFamily="casual"
+        android:text="Gate security"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/profilebutton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginVertical="30dp"
-            android:background="@drawable/ic_baseline_perm_identity_24" />
+    <Button
+        android:id="@+id/profilebutton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="30dp"
+        android:background="@drawable/ic_baseline_perm_identity_24" />
 
     <ScrollView
         android:layout_width="match_parent"

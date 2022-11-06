@@ -1,4 +1,4 @@
-package com.example.gatesecurutiyapp.Home.features;
+package com.example.gatesecurutiyapp.Member;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -6,17 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
+import com.example.gatesecurutiyapp.Home.features.residents;
 import com.example.gatesecurutiyapp.MyAdapter;
+import com.example.gatesecurutiyapp.MyAdapter2;
 import com.example.gatesecurutiyapp.R;
 import com.example.gatesecurutiyapp.fetchResident;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.example.gatesecurutiyapp.fetchsocservice;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -26,17 +24,16 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class residents extends AppCompatActivity {
+public class membersocservices extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    ArrayList<fetchResident> residentArrayList;
-    MyAdapter myAdapter;
+    ArrayList<fetchsocservice> fetchsocserviceArrayList;
+    MyAdapter2 myAdapter2;
     FirebaseFirestore db;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_residents);
+        setContentView(R.layout.activity_membersocservices);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
@@ -45,17 +42,17 @@ public class residents extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         db = FirebaseFirestore.getInstance();
-        residentArrayList = new ArrayList<fetchResident>();
-        myAdapter = new MyAdapter(residents.this, residentArrayList);
+        fetchsocserviceArrayList = new ArrayList<fetchsocservice>();
+        myAdapter2 = new MyAdapter2(membersocservices.this, fetchsocserviceArrayList);
 
-        recyclerView.setAdapter(myAdapter);
+        recyclerView.setAdapter(myAdapter2);
 
         EventChangeListener();
     }
 
-    private void EventChangeListener() {
-
-        db.collection("users").orderBy("name", Query.Direction.ASCENDING)
+    private void EventChangeListener()
+    {
+        db.collection("socservice")
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -71,10 +68,10 @@ public class residents extends AppCompatActivity {
                         {
                             if(dc.getType() == DocumentChange.Type.ADDED){
 
-                                residentArrayList.add(dc.getDocument().toObject(fetchResident.class));
+                                fetchsocserviceArrayList.add(dc.getDocument().toObject(fetchsocservice.class));
                             }
 
-                            myAdapter.notifyDataSetChanged();
+                            myAdapter2.notifyDataSetChanged();
                         }
                     }
                 });

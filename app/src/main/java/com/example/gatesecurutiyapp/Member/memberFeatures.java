@@ -1,4 +1,4 @@
-package com.example.gatesecurutiyapp.Home.features;
+package com.example.gatesecurutiyapp.Member;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,11 +9,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.gatesecurutiyapp.Home.features.EmergencyNo;
+import com.example.gatesecurutiyapp.Home.features.Features;
+import com.example.gatesecurutiyapp.Home.features.announcements;
+import com.example.gatesecurutiyapp.Home.features.rent_sale;
+import com.example.gatesecurutiyapp.Home.features.residents;
+import com.example.gatesecurutiyapp.Home.features.socservices;
 import com.example.gatesecurutiyapp.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class Features extends AppCompatActivity {
+public class memberFeatures extends AppCompatActivity {
     CardView emergencycv;
     CardView announcmentcv;
     CardView socservicecv, residentcv;
@@ -23,7 +29,7 @@ public class Features extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setStatusBarColor(ContextCompat.getColor(Features.this, R.color.appblack));
+        getWindow().setStatusBarColor(ContextCompat.getColor(memberFeatures.this, R.color.appblack));
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         setContentView(R.layout.activity_features);
@@ -38,17 +44,17 @@ public class Features extends AppCompatActivity {
         residentcv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    Intent intent = new Intent(Features.this,
-                            residents.class);
+                Intent intent = new Intent(memberFeatures.this,
+                        residents.class);
 
-                    startActivity(intent);
+                startActivity(intent);
             }
         });
         emergencycv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Features.this,
-                        EmergencyNo.class);
+                Intent intent = new Intent(memberFeatures.this,
+                        memberEmergencyNo.class);
 
                 startActivity(intent);
             }
@@ -57,8 +63,8 @@ public class Features extends AppCompatActivity {
         socservicecv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Features.this,
-                        socservices.class);
+                Intent intent = new Intent(memberFeatures.this,
+                        membersocservices.class);
 
                 startActivity(intent);
             }
@@ -67,8 +73,8 @@ public class Features extends AppCompatActivity {
         announcmentcv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Features.this,
-                        announcements.class);
+                Intent intent = new Intent(memberFeatures.this,
+                        memberAnnouncements.class);
 
                 startActivity(intent);
             }

@@ -1,8 +1,6 @@
 package com.example.gatesecurutiyapp.Home.features;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,11 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.gatesecurutiyapp.GuardHome;
-import com.example.gatesecurutiyapp.Home.Home;
-import com.example.gatesecurutiyapp.MainActivity;
 import com.example.gatesecurutiyapp.R;
-import com.example.gatesecurutiyapp.Signup;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,7 +27,7 @@ import com.google.firebase.storage.StorageReference;
 
 public class socservices extends AppCompatActivity {
     EditText addplumber, addwater, addelectricity, addhousemaid, addcleaner, addwifiprovider;
-    Button addnobtn;
+    Button updatenobtn;
 
     StorageReference storageReference;
     FirebaseAuth auth;
@@ -54,7 +48,7 @@ public class socservices extends AppCompatActivity {
         addhousemaid = findViewById(R.id.housemaidedit);
         addcleaner = findViewById(R.id.cleaneredit);
         addwifiprovider = findViewById(R.id.Wifiprovideredit);
-        addnobtn = findViewById(R.id.addnobtn);
+        updatenobtn = findViewById(R.id.updatenobtn);
 
         auth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -68,23 +62,23 @@ public class socservices extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
                 addplumber.setText(documentSnapshot.getString("plumber"));
-                addwater.setText(documentSnapshot.getString("water supplier"));
+                addwater.setText(documentSnapshot.getString("watersupplier"));
                 addelectricity.setText(documentSnapshot.getString("electricity"));
-                addhousemaid.setText(documentSnapshot.getString("house maid"));
+                addhousemaid.setText(documentSnapshot.getString("housemaid"));
                 addcleaner.setText(documentSnapshot.getString("cleaner"));
-                addwifiprovider.setText(documentSnapshot.getString("wifi provider"));
+                addwifiprovider.setText(documentSnapshot.getString("wifiprovider"));
             }
         });
-
-        addnobtn.setOnClickListener(new View.OnClickListener() {
+        updatenobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updateProfile();
+                updateProfile2();
             }
         });
     }
 
-    private void updateProfile() {
+    private void updateProfile2()
+    {
         String plumber = addplumber.getText().toString();
         String water = addwater.getText().toString();
         String electricity = addelectricity.getText().toString();
@@ -98,11 +92,11 @@ public class socservices extends AppCompatActivity {
             public Void apply(Transaction transaction) throws FirebaseFirestoreException {
 
                 transaction.update(sDoc, "plumber", plumber);
-                transaction.update(sDoc, "water supplier", water);
+                transaction.update(sDoc, "watersupplier", water);
                 transaction.update(sDoc, "electricity", electricity);
-                transaction.update(sDoc, "house maid", housemaid);
+                transaction.update(sDoc, "housemaid", housemaid);
                 transaction.update(sDoc, "cleaner", cleaner);
-                transaction.update(sDoc, "wifi provider", wifiprovider);
+                transaction.update(sDoc, "wifiprovider", wifiprovider);
 
                 return null;
             }
@@ -115,7 +109,7 @@ public class socservices extends AppCompatActivity {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(socservices.this, "Failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(socservices.this, "added", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
